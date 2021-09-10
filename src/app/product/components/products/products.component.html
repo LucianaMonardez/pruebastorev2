@@ -1,0 +1,10 @@
+<div class="product-grid">
+  <!-- {{ product.title }}
+  <img [src]="product.image" alt="" />
+  {{ product.price }} -->
+  <app-product
+    *ngFor="let product of products"
+    (productClicked)="clickProduct($event)"
+    [product]="product"
+  ></app-product>
+</div>

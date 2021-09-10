@@ -1,0 +1,69 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row between-md">
+      <div class="col-xs-12 col-md-3">
+        <div class="box">
+          <h2 class="text-uppercase">
+            <mat-icon color="white">catching_pokemon</mat-icon>
+            <b> Pokestore </b>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            velit odio iste ullam nobis, sequi praesentium aspernatur, labore
+            perspiciatis omnis ipsum at repellat voluptatum ratione, temporibus
+            fuga! Natus, voluptatem recusandae.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-3">
+        <div class="box">
+          <h3 class="text-uppercase"><b>MORE INFO</b></h3>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">About us</a>
+            </li>
+            <li>
+              <a href="#!">Shipping information</a>
+            </li>
+            <li>
+              <a href="#!">Privacy Policy</a>
+            </li>
+            <li><a href="#!">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-3">
+        <div class="box">
+          <h3 class="text-uppercase"><b>CONTACT</b></h3>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Add an email"
+              [formControl]="emailField"
+              type="email"
+            />
+          </mat-form-field>
+          <button
+            mat-raised-button
+            [disabled]="emailField.invalid"
+            click="sendMail()"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row center-xs">
+      <div class="col-xs-12">
+        <div class="box">
+          <p>All images/names are property of the Pokémon Company</p>
+          <p>Develop with 💗 by Luciana</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

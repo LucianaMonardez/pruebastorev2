@@ -1,0 +1,73 @@
+<div class="text-container">
+  <h1>Contact us</h1>
+</div>
+<div class="container">
+  <form class="form-container">
+    <!-- <table class="form-contact">
+      <tr>
+        <mat-form-field
+          class="example-full-width"
+          appearance="fill"
+          class="width50"
+        >
+          <mat-label>First name</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <td>
+          <mat-form-field
+            class="example-full-width"
+            appearance="fill"
+            class="width50"
+          >
+            <mat-label>Last name</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table> -->
+    <div class="flex">
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        class="width49"
+      >
+        <mat-label>First name</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field
+        class="example-full-width"
+        appearance="fill"
+        class="width49"
+      >
+        <mat-label>Last name</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+
+    <!-- <form class="example-form"> -->
+    <mat-form-field class="example-full-width width100" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        placeholder="Ex. pat@example.com"
+        [formControl]="email"
+        required
+      />
+      <mat-error *ngIf="email.invalid">
+        {{ getErrorMessage() }}
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <!-- </form> -->
+    <mat-form-field appearance="fill" id="textarea">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Send</button>
+  </form>
+  <div class="img-container"></div>
+</div>

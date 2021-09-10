@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-gap: 10px;
+  // grid-auto-rows: minmax(100px, auto);
+  padding-top: 1em;
+  padding-bottom: 2em;
+  justify-content: space-between;
+  padding-left: 5em;
+  padding-right: 10em;
+}
+
+.img-container {
+  background-image: url("../../../assets/images/contact-us.png");
+  height: 500px;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-right: 5em;
+}
+
+.width49 {
+  width: 49%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+#textarea {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.text-container {
+  padding-top: 2em;
+  padding-left: 5em;
+}
