@@ -28,10 +28,11 @@ import { ProductsListComponent } from './componentes/products-list/products-list
 
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { FormProductComponent } from './componentes/form-product/form-product.component';
+import { ProductEditComponent } from './componentes/product-edit/product-edit.component';
 
 
 @NgModule({
-  declarations: [ ProductsFormsComponent, NavComponent, ProductListComponent, DashboardComponent, ProductsListComponent, FormProductComponent ],
+  declarations: [ ProductsFormsComponent, NavComponent, ProductListComponent, DashboardComponent, ProductsListComponent, FormProductComponent, ProductEditComponent ],
   imports: [
     MaterialModule,
     LayoutModule,

@@ -11,6 +11,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { GroupProductsPipe } from './pipes/group-products.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HighlightDirective,
     FooterComponent,
     HeaderComponent,
+    GroupProductsPipe,
     //DemoComponent,
   ],
   exports: [
