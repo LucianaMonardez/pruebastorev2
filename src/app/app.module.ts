@@ -1,3 +1,5 @@
+import { environment } from './../environments/environment.prod';
+
 import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,8 +14,10 @@ import { AppComponent } from './app.component';
 //import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
+import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 //import { NgSvgIconModule } from 'ng-svg-icon';
 
@@ -28,6 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // PageNotFoundComponent,
     //ProductDetailComponent,
     LayoutComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -36,12 +42,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoreModule,
     BrowserAnimationsModule,
     // NgSvgIconModule.forRoot({})
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
+    AngularFireAuthModule
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
 
 // NgSvgIconModule.forRoot({
 //   defaultColor: '#000',

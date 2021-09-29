@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { GroupProductsPipe } from './pipes/group-products.pipe';
+import { CountItemsPipe } from './pipes/count-items.pipe';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,17 @@ import { GroupProductsPipe } from './pipes/group-products.pipe';
     FooterComponent,
     HeaderComponent,
     GroupProductsPipe,
+    CountItemsPipe,
     //DemoComponent,
   ],
   exports: [
     ExponentialPipe,
+    GroupProductsPipe,
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
     FontAwesomeModule,
+    CountItemsPipe
   ],
   imports: [
     CommonModule,
@@ -37,6 +41,7 @@ import { GroupProductsPipe } from './pipes/group-products.pipe';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+
   ],
 })
 export class SharedModule {}

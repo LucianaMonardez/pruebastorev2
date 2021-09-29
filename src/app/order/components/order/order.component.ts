@@ -1,9 +1,10 @@
-
+import { groupedProduct } from './../../../product.model';
+import { Product } from 'src/app/product.model';
 import { Observable } from 'rxjs';
 import { CartService } from './../../../core/services/cart.service';
-import { Product } from './../../../product.model';
-import { Component, OnInit, Pipe } from '@angular/core';
+import { Component, OnInit, Pipe, Input } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,17 +13,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit {
+  @Input() product: groupedProduct | undefined;
 
 
   products$: Observable<Product[]>;
   cardValid: Observable<boolean>;
   constructor(
-    private cartServise: CartService
+    private cartService: CartService
   ) {
-     this.products$ = this.cartServise.cart$;
-     this.cardValid = this.cartEmpty();
-   }
-
+    this.products$ = this.cartService.cart$;
+    this.cardValid = this.cartEmpty();
+  }
 
   ngOnInit(): void {
   }
@@ -39,13 +40,50 @@ export class OrderComponent implements OnInit {
     );
   }
   addProductCart(product: Product): any {
-    this.cartServise.addCart(product);
+    this.cartService.addCart(product);
+  }
+  removeFromCart(productId: String) {
+    this.cartService.removeItems(productId);
   }
 
-  // deleteProductCart(product: string): any {
-  //   this.cartServise.deleteProductCart(product);
-  // }
+  /**
+   * Quita un producto especifico del carrito.
+   */
+  remove(productId: String) {
+    this.cartService.removeFromCartbyProduct(productId);
+  }
 
+  /**
+   * Precio total de todos los productos.
+   */
+  total(): number {
+    let total: number = 0;
+
+    this.products$.subscribe((products) => {
+      products.forEach((product) => {
+        total = total + product.price;
+      });
+    });
+
+    return total;
+  }
+
+  duplicatedProducts(producto: Product): number {
+    let count: number = 0;
+    // for (let i = 0; i < product.lenght; i++) {
+    //   if(product.id === product[i].id){
+    //     count++;
+    //   }
+    // }
+    this.products$.subscribe((products) => {
+      products.forEach((product) => {
+        if(product.id === producto.id){
+        count++;
+          }
+      });
+    });
+    return count;
+    }
 
 
 }
