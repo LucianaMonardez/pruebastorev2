@@ -1,3 +1,4 @@
+import { AuthentificationModule } from './authentification/authentification.module';
 import { PageNotFoundRoutingModule } from './page-not-found/page-not-found-routing.module';
 import { AdminGuard } from './admin.guard';
 //import { HomeComponent } from './home/components/banner/home/home.component';
@@ -28,7 +29,6 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       // {
@@ -37,9 +37,12 @@ const routes: Routes = [
       // },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
+      {
+        path: 'order',
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+      }
 
     ]
 
@@ -47,12 +50,16 @@ const routes: Routes = [
 
   {
     path: 'demo',
-    canActivate: [AdminGuard],
     loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'authentification',
+    loadChildren: () => import('./authentification/authentification.module').then(m => m.AuthentificationModule)
   },
   {
     path: '**',

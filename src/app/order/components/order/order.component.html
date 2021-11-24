@@ -1,0 +1,92 @@
+<!-- <mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Your products</ng-template>
+    <div *ngIf="products$ | async as products">
+      <p *ngIf="products.length === 0">Your cart is empty!</p>
+      <ul>
+        <li *ngFor="let product of products">
+          {{ product.title }}
+        </li>
+        <li *ngFor="let product of products">{{ product.price }}</li>
+        <li *ngFor="let product of products">{{ product.image }}</li>
+      </ul>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Contact Information </ng-template>
+
+    <h1>info</h1>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Payment </ng-template>
+
+    <h1>info</h1>
+  </mat-step>
+</mat-horizontal-stepper> -->
+
+<mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Carrito</ng-template>
+    <div *ngIf="products$ | async | groupProducts: 'id' as products">
+      <p *ngIf="products.length === 0">No products</p>
+      <div class="row" *ngFor="let product of products">
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <div class="box">
+            <img
+              class="image"
+              [src]="product.image"
+              [alt]="product.title"
+              style="max-width: 80px; max-height: 80px"
+            />
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <div class="box">
+            {{ product.title }}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <div class="box">
+            {{ product.price }}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+          <div class="box">
+            <!-- <label>
+              <b>({{ duplicatedProducts(product) }})</b>
+            </label> -->
+
+            &nbsp;<button
+              mat-raised-button
+              color="primary"
+              (click)="addProductCart(product)"
+            >
+              +
+            </button>
+            <button
+              mat-raised-button
+              color="warn"
+              class="quantity-button"
+              (click)="removeFromCart(product.id)"
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-divider></mat-divider>
+      <h2>Total: {{ total() | currency }}</h2>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Contact info</ng-template>
+    <h1>Info</h1>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Payment options</ng-template>
+    <h1>Info</h1>
+  </mat-step>
+</mat-horizontal-stepper>

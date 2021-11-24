@@ -6,3 +6,7 @@ export interface Product{
   image: string;
 
 }
+
+export interface groupedProduct extends Product {
+  count: number;
+}

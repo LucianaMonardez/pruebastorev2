@@ -1,3 +1,4 @@
+import { ProductEditComponent } from './componentes/product-edit/product-edit.component';
 import { FormProductComponent } from './componentes/form-product/form-product.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ProductListComponent } from './componentes/product-list/product-list.component';
@@ -7,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsFormsComponent } from './componentes/products-forms/products-forms.component';
 import { ProductsListComponent } from './componentes/products-list/products-list.component';
+
 
 
 
@@ -35,6 +37,10 @@ const routes: Routes = [
     {
       path: 'products/create',
       component:FormProductComponent
+    },
+    {
+      path: 'products/edit/:id',
+      component:ProductEditComponent
     },
   ]
 }

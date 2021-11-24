@@ -1,14 +1,66 @@
-<form [formGroup]="form">
-  <mat-form-field>
-    <input formControlName="id" matInput type="text" />
-  </mat-form-field>
-  <mat-form-field>
-    <input formControlName="title" matInput type="text" />
-  </mat-form-field>
-  <mat-form-field>
-    <input formControlName="price" matInput type="number" />
-  </mat-form-field>
-  <mat-form-field>
-    <input formControlName="description" matInput type="text" />
-  </mat-form-field>
+<form [formGroup]="form" (ngSubmit)="saveProduct($event)">
+  <mat-card-header>
+    <mat-card-title>Product</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-xs">
+        <mat-form-field>
+          <input placeholder="Id" formControlName="id" matInput type="text" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs">
+        <mat-form-field>
+          <input
+            placeholder="Title"
+            formControlName="title"
+            matInput
+            type="text"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs">
+        <mat-form-field>
+          <input
+            placeholder="Price"
+            formControlName="price"
+            matInput
+            type="number"
+          />
+        </mat-form-field>
+        <!-- <div *ngIf="form.get('price').errors && form.get('price').dirty">
+
+         </div> -->
+        <p *ngIf="form.get('price').hasError('price_invalid')">Invalid field</p>
+        <p *ngIf="form.get('price').hasError('required')">Required field</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs">
+        <mat-form-field>
+          <textarea
+            placeholder="Description"
+            formControlName="description"
+            matInput
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs">
+        <img *ngIf="image$ | async as image" [src]="image$ | async" alt="" />
+        <input type="file" (change)="uploadFile($event)" />
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button [disabled]="form.invalid" mat-raised-button type="submit">
+      Create
+    </button>
+  </mat-card-actions>
 </form>
