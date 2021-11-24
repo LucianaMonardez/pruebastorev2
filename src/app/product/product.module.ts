@@ -8,12 +8,14 @@ import { CommonModule } from '@angular/common';
 
 
 import { ProductRoutingModule } from './product-routing.module';
+import { ItemsforyouComponent } from './components/itemsforyou/itemsforyou.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductDetailComponent,
-    ProductsComponent
+    ProductsComponent,
+    ItemsforyouComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,31 @@
+.img-container {
+  background-image: url("./../../../../../assets/images/plush.jpg");
+  height: 250px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.img-container2 {
+  background-image: url("./../../../../../assets/images/games.jpg");
+  height: 250px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.img-container3 {
+  background-image: url("./../../../../../assets/images/clothing.jpg");
+  height: 250px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#container {
+  display: flex;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  justify-content: space-between;
+  padding-left: 10em;
+  padding-right: 10em;
+  text-align: center;
+}

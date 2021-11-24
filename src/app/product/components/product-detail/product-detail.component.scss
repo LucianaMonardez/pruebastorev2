@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  position: relative;
+  width: 70%;
+}
+.container {
+  display: flex;
+  margin-top: 5em;
+  justify-content: center;
+  width: 100%;
+}
+.text {
+  max-width: 400px;
+}
+.img-crop {
+  display: block;
+  height: 500px;
+  width: 500px;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    //object-position: left;
+  }
+}

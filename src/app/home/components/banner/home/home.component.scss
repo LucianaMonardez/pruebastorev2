@@ -1,0 +1,29 @@
+.shippingcontainer {
+  display: flex;
+  color: white;
+  background-color: #3f51b5;
+  text-align: center;
+  height: 300px;
+}
+.elements {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+}
+.img-world {
+  background-image: url("./../../../../../assets/images/world.png");
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.img-card {
+  background-image: url("./../../../../../assets/images/card.png");
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

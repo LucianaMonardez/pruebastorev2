@@ -1,0 +1,38 @@
+.pikachu {
+  background-image: url("./../../../../../assets/images/pikachu.jpg");
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.eevee {
+  background-image: url("./../../../../../assets/images/eevee.jpg");
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.gengar {
+  background-image: url("./../../../../../assets/images/gengar.jpg");
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.scorbunny {
+  background-image: url("./../../../../../assets/images/scorbunny.jpg");
+  height: 150px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.text {
+  // text-align: center;
+  display: flex;
+  justify-content: center;
+}
