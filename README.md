@@ -10,7 +10,17 @@ To do:
   •User view and orders detail.
   •Checkout process (items in cart: ok! customer information and confirmation with a payment method need to perform)
   •Email service for subscription, contact us and order confirmation.
+  
+  ----------------------------------------------------------
+  
+✨✨✨ El proyecto se trata de un ecommerce (de Pokemon!), se utilizaron librerias UI como Angular Material, Sass and Swiper✨✨✨
+El backend esta hecho en FireBase (para el ingreso de los usuarios/admin, y para hostear las imagenes de los productos), los servicios consumen una APi publica para poder generar los productos. Actualmente me encuentro aprendiendo Docker para poder hacer el deploy de mi API hecha en .net. Tambien estoy aprendiendo otras tecnologias como Java y NodeJS para facilitar el depploy de la API y el proyecto.
 
+Queda por hacer:
+  •El deploy de la API y su integracion
+  •User view y detalle de ordenes.
+  •Proceso de checkout (Items en el carrito OK! Falta realizar la vista donde el usuario pone sus datos, y la vista donde el usuario pone el metodo de pago y confirma la compra)
+  •Servicio de email, para las suscripciones, el contact us y la confirmacion de orden.
 
 
 ## Development server
