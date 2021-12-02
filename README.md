@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
+✨✨✨ This is a ecommerce using UI libraries like Angular Material, Sass and Swiper ✨✨✨
+The backend is done in FireBase (for Admin/user and images), the products come from a public API. Im actually learning docker for deploy my API done in .net
+
+To do:
+  •Deploy .net api and the integration with the project.
+  •User view and orders detail.
+  •Checkout process (items in cart: ok! customer information and confirmation with a payment method need to perform)
+  •Email service for subscription, contact us and order confirmation.
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
